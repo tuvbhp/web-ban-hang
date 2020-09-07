@@ -12,10 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/test','TestController@index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','PagesController@index')->name('index.pages');
 //Route::get('/','AdminController@loginAdmin')->name('login');
 //Route::post('/','AdminController@postLoginAdmin')->name('post.login');
 Route::prefix('admin')->group(function () {
@@ -43,6 +42,11 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}','ProductController@edit')->name('edit.product');
         Route::post('/update/{id}','ProductController@update')->name('update.product');
         Route::get('/delete/{id}','ProductController@destroy')->name('delete.product');
+    });
+    Route::prefix('slider')->group(function(){
+        Route::get('/','SliderController@index')->name('index.slider');
+        Route::get('/create','SliderController@create')->name('create.slider');
+        Route::post('/store','SliderController@store')->name('store.slider');    
     });
 });
 

@@ -33,7 +33,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
      * Get All
      * @return \Illuminate\Database\Eloquent\Collection|static[]
      */
-    public function all($columns = ['*'])
+    public function all()
     {
         return $this->model->orderBy('id', 'desc')->get();
     }
@@ -42,7 +42,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
      * @param $id
      * @return mixed
      */
-    public function find($id, $columns = ['*'])
+    public function find($id)
     {
         $result = $this->model->find($id);
         return $result;
@@ -62,6 +62,17 @@ abstract class BaseRepository implements BaseRepositoryInterface
      * @param $id
      * @return bool
      */
+
+    public function update( $input, $id)
+    {
+        $result = $this->find($id);
+        if ($result) {
+            $result->update($input);
+            return $result;
+        }
+        return false;
+    }
+
     public function delete($id)
     {
         $result = $this->find($id);

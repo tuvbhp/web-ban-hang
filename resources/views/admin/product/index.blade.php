@@ -31,9 +31,9 @@
                         <tr>
                             <th scope="row">{{ $product->id }}</th>
                             <td>{{ $product->name }}</td>
-                            <td>{{ $product->price }}</td>
+                            <td>{{ number_format($product->price) }}</td>
                             <td><img class="product_image_150_100" src=" {{ $product->feature_image_path }} " alt=""></td>
-                            <td>{{ $product->category->name }}</td>
+                            <td>{{ optional($product->category)->name }}</td>
                             <td><a href="{{route('edit.product', $product->id)}}" class="btn btn-success">Edit</a>
                                 <a href="{{route('delete.product', $product->id)}}" class="btn btn-success">Delete</a></td>
                         </tr>

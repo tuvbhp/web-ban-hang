@@ -1,0 +1,19 @@
+body
+{
+    width: 500px;
+    margin: 20px auto;
+}
+
+h4
+{
+    background-color: #00A19C;
+    padding: 10px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+div
+{
+    background-color: #C7EEEB;
+    padding: 5px;
+}

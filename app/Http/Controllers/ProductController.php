@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use DB;
 
+
 class ProductController extends Controller
 {
     use StorageImageTrait;
@@ -100,5 +101,15 @@ class ProductController extends Controller
         }
 
 
+    }
+
+    public function edit($id){
+        $product = $this->product->find($id);
+        $htmlOption = $this->getCategory($parent_id = '');
+        return view('admin.product.edit',compact('htmlOption','product'));
+    }
+
+    public function update(Request $request,$id){
+        
     }
 }

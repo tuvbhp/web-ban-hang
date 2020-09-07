@@ -30,13 +30,4 @@ class CategoryRepository extends BaseRepository implements CategoryRepositoryInt
         $category->save();
     }
 
-    public function update( $input, $id)
-    {
-        $result = $this->find($id);
-        if ($result) {
-            $result->update($input);
-            return $result;
-        }
-        return false;
-    }
 }

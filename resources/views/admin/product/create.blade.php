@@ -19,7 +19,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Price</label>
-                        <input type="integer" class="form-control" placeholder="Nhập Giá Sản Phẩm" name="price">
+                        <input type="number" class="form-control" placeholder="Nhập Giá Sản Phẩm" name="price">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ảnh Đại Diện</label>
