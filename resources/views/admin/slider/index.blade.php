@@ -27,14 +27,13 @@
                     </thead>
                     <tbody>
                         @foreach($sliders as $slider)
-                    <tr> 
+                    <tr>
                         <th > {{ $slider->id}}</th>
                         <td scope="row"> {{ $slider->name }}</td>
                         <td scope="row"> {{ $slider->content }}</td>
-                        <td>{{ $slider->feature_image_path }}</td>
-                        <td><a href="#">Edit</a>
-                            <a href="#">Delete</a>
-                        </td>
+                        <td><img src="{{ $slider->feature_image_path }}" class="product_image_150_100"/></td>
+                        <td><a href="{{route('edit.slider',$slider->id)}}" class="btn btn-success">Edit</a>
+                            <a href="{{route('delete.slider',$slider->id)}}" class="btn btn-success">Delete</a></td>
                     </tr>
                         @endforeach
                     </tbody>

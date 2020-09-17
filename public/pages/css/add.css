@@ -1,0 +1,15 @@
+.img_cart{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.action{
+    width:150px;
+   
+}
+.cart_update{
+    display: inline-block;
+}
+.cart_delete{
+    display: inline-block;
+}

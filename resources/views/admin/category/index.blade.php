@@ -27,15 +27,15 @@
                             <td>{{ $category->parent_id }}</td>
                             <td>{{ $category->slug }}</td>
                             <td><a href="{{route('edit.category', $category->id)}}" class="btn btn-success">Edit</a>
-                                <a href="{{route('delete.category', $category->id)}}" class="btn btn-success">Delete</a></td>
+                                <a href="{{route('delete.category', $category->id)}}" class="btn btn-danger">Delete</a></td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-12">
-{{--                {{ $categories->links() }}--}}
-            </div>
+            {{-- <div class="col-md-12">
+               {{ $categories->links() }}
+            </div> --}}
         </div>
     </div>
 @endsection

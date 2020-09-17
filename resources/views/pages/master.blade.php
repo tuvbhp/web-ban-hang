@@ -24,21 +24,22 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
         href="{{ asset('pages/images/ico/apple-touch-icon-72-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('pages/images/ico/apple-touch-icon-57-precomposed.png') }}">
+    <link rel="stylesheet" href="{{ asset('pages/css/add.css') }}">
 </head>
 <!--/head-->
 
 <body>
     @include('pages.header')
-    @include('pages.slider')
-    @include('pages.sidebar')
+    @yield('content')
     @include('pages.footer')
-
     <script src="{{ asset('pages/js/jquery.js') }}"></script>
     <script src="{{ asset('pages/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('pages/js/jquery.scrollUp.min.js') }}"></script>
     <script src="{{ asset('pages/js/price-range.js') }}"></script>
     <script src="{{ asset('pages/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('pages/js/main.js') }}"></script>
+    <script src="{{ asset('pages/js/add.js') }}"></script>
+    @yield('js')
 </body>
 
 </html>

@@ -5,8 +5,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> 0971543263</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> tuvbhp1807@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -30,7 +30,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						<a href="{{route('index.pages')}}"><img class="img_heo_logo" src="{{asset('pages/images/home/logo.png')}}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -62,7 +62,7 @@
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+							<li><a href="{{route('showCart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
